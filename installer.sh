@@ -4,35 +4,28 @@
 echo 'checking os ...'
 case "$OSTYPE" in
   "linux-gnu"*)
-  echo 'check distribution'
-  # ONLY FOR AUR
-  if [ -f /etc/os-release ]; then
-      . /etc/os-release
-      OS=$NAME
-      VER=$VERSION_ID
-  fi
-#  if [[ "$OS" == ""]]
-#  else
-#    curl -fsSL https://deno.land/x/install/install.sh | sh
-#  fi
-#  echo "$OS"
-  echo "$VER"
+    echo 'check distribution'
+    # ONLY FOR AUR
+    if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        OS=$NAME
+        VER=$VERSION_ID
+    fi
+    if [[ "$OS" == "Manjaro Linux" ]]; then
+      # NEED PASSWORD
+      command sudo pacman -S --noconfirm --needed deno
+    else
+      command curl -fsSL https://deno.land/x/install/install.sh | sh
+    fi
+    ;;
+  "msys")
+    command iwr https://deno.land/x/install/install.ps1 -useb | iex
+    ;;
+  "darwin"*)
+    command brew install deno
+    ;;
+  *)
+    echo "cannot found OSTYPE"
+    ;;
 esac
-
-#if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-#  # PASS
-#elif [[ "$OSTYPE" == "darwin"* ]]; then
-#        # Mac OSX
-#elif [[ "$OSTYPE" == "cygwin" ]]; then
-#        # POSIX compatibility layer and Linux environment emulation for Windows
-#elif [[ "$OSTYPE" == "msys" ]]; then
-#        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
-#elif [[ "$OSTYPE" == "win32" ]]; then
-#        # I'm not sure this can happen.
-#elif [[ "$OSTYPE" == "freebsd"* ]]; then
-#        # ...
-#else
-#        # Unknown.
-#fi;while [  ]; do
-#
-#done
+command deno run installer.ts
