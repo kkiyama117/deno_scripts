@@ -28,4 +28,4 @@ case "$OSTYPE" in
     echo "cannot found OSTYPE"
     ;;
 esac
-command deno run installer.ts
+command deno run install_commands/main.ts
