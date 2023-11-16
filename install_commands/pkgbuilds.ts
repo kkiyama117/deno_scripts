@@ -3,11 +3,11 @@
 
 // import { parse } from "https://deno.land/std/flags/mod.ts";
 
-function __filename(): String {
+export function __filename(): string {
     return new URL("", import.meta.url).pathname;
 }
 
-function __dirname(): String {
+export function __dirname(): string{
     return new URL(".", import.meta.url).pathname;
 }
 

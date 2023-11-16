@@ -59,7 +59,7 @@ export function tryCatch<T, E extends Error>(
     }
 }
 
-async function tryCatchAsync<T, E extends Error>(
+export async function tryCatchAsync<T, E extends Error>(
     func: () => Promise<T>,
     // 発生する例外は any なので適切な型に変換するための
     // 関数を与える。
@@ -73,7 +73,7 @@ async function tryCatchAsync<T, E extends Error>(
     }
 }
 
-function unwrap<T, E extends Error>(result: Result<T, E>): T {
+export function unwrap<T, E extends Error>(result: Result<T, E>): T {
     if (result.isFailure()) {
         throw result.error;
     }
