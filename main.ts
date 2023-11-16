@@ -1,4 +1,4 @@
-import {hoge,install_paru} from "./install_commands/installer.ts"
+import {hoge, install_paru} from "./install_commands/installer.ts"
 
 // export function add(a: number, b: number): number {
 //   return a + b;
@@ -13,7 +13,7 @@ if (import.meta.main) {
     // installer
     if (_command == "install") {
         console.log("running install scripts")
-        if (_os == "arch"){
+        if (_os == "arch") {
             await install_paru();
         }
     }

@@ -3,8 +3,8 @@
 !/.gitignore
 !/README.md
 !/**/PKGBUILD
-!/**/LICENSE
-!/**/LICENSE.txt
+!/*/LICENSE
+!/*/LICENSE.txt
 
 # rustrover
 !/rustrover/jetbrains-rustrover.desktop
