@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch installer_commands/main.ts"
+    "dev": "/usr/bin/env bash ./installer.sh",
+    "dev_ts": "deno run --watch main.ts"
   }
 }
