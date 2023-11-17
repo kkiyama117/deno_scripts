@@ -10,3 +10,8 @@
 !/rustrover/jetbrains-rustrover.desktop
 # webstorm
 !/webstorm/jetbrains-webstorm-eap.desktop
+# pycharm
+!/pycharm-professional/ltedit.desktop
+!/pycharm-professional/pycharm-professional.desktop
+!/pycharm-professional/pycharm-professional_x86_64.install
+!/pycharm-professional/pycharm-professional_aarch64.install
