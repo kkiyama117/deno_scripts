@@ -1,9 +1,0 @@
-警告: paru-1.11.1-1 は最新です -- スキップ
-警告: base-devel-1-2 は最新です -- スキップ
-fatal: destination path '/home/kiyama/programs/mine/scripts/.cache/paru' already exists and is not an empty directory.
-==> エラー: パッケージはすでにビルドされています。(-f で上書きします)
-警告: paru-1.11.1-1 は最新です -- スキップ
-警告: base-devel-1-2 は最新です -- スキップ
-fatal: destination path '/home/kiyama/programs/mine/scripts/.cache/paru' already exists and is not an empty directory.
-==> エラー: パッケージはすでにビルドされています。(-f で上書きします)
-警告: paru-1.11.1-1 は最新です -- スキップ
