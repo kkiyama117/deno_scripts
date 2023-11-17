@@ -1,2 +1,5 @@
 /.idea
 deno.lock
+/logs
+!/logs/
+!/logs/.keep
