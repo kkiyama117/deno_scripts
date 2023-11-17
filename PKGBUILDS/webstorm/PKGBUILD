@@ -7,7 +7,7 @@
 pkgbase=webstorm-eap
 pkgname=(webstorm webstorm-jre)
 pkgver=233.11799.31
-pkgrel=1
+pkgrel=100
 pkgdesc='JavaScript IDE and HTML editor'
 arch=('x86_64' 'i686')
 url='https://www.jetbrains.com/webstorm/'

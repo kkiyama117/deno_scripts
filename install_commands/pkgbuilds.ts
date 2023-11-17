@@ -2,18 +2,7 @@
 // https://kmyk.github.io/blog/blog/2015/09/19/how-to-make-packages-of-arch-linux/
 
 // import { parse } from "https://deno.land/std/flags/mod.ts";
-
-export function __filename(): string {
-    return new URL("", import.meta.url).pathname;
-}
-
-export function __dirname(): string{
-    return new URL(".", import.meta.url).pathname;
-}
-
 export async function create_pkg(pkg_name: string): Promise<boolean> {
-    console.log(__filename());
-    console.log(__dirname());
     return true;
     // const command = new Deno.Command("makepkg", {
     //         args: [],

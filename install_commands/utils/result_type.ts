@@ -77,7 +77,7 @@ export function unwrap<T, E extends Error>(result: Result<T, E>): T {
     if (result.isFailure()) {
         throw result.error;
     }
-    return result.value;
+    return (result as Success<T>).value;
 }
 
 // class Result<T, E extends Error> {

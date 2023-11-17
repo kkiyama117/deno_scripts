@@ -3,3 +3,6 @@ deno.lock
 /logs
 !/logs/
 !/logs/.keep
+/.cache
+!/.cache/
+!/.cache/.keep

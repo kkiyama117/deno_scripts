@@ -33,4 +33,4 @@ case "$OSTYPE" in
     OSTYPE=0
     ;;
 esac
-command deno run --allow-env --allow-run --allow-read="./**/*" main.ts install $OS
+command deno run --allow-env --allow-run --allow-read="." --allow-write="logs" main.ts install $OS
