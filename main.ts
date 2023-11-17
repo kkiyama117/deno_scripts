@@ -1,6 +1,7 @@
 import {hoge, install_paru} from "./install_commands/installer.ts"
 import CommandOutput = Deno.CommandOutput;
 import {instanceOfCommandOutput, write_commnand_out} from "./install_commands/utils/command_result_parser.ts";
+import {AnyError, Failure, Success} from "./install_commands/utils/result_type.ts";
 
 // export function add(a: number, b: number): number {
 //   return a + b;
@@ -18,17 +19,12 @@ if (import.meta.main) {
         if (_os == "arch") {
             const result_install_paru = await install_paru();
             if (result_install_paru.isSuccess()) {
-                const results: CommandOutput[] = result_install_paru.value;
-                for (const result in results) {
-                    if (instanceOfCommandOutput(result)) {
-                        await write_commnand_out(result.stdout, "install_paru.log");
-                        await write_commnand_out(result.stderr, "install_paru.log");
-                    }
-                }
+                console.log("paru successfully installled!");
+            } else {
+                console.error("install paru failed!");
             }
-            console.log("paru successfully installled!");
         } else {
-            console.error("install paru failed!");
+            console.log("NOT ARCH LINUX")
         }
     }
 }

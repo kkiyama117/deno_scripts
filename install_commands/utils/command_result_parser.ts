@@ -26,6 +26,6 @@ export function console_command_out(base: Uint8Array): Result<undefined, AnyErro
 export async function write_commnand_out(base: Uint8Array, file_path: string): PromiseResult<undefined, AnyError> {
     const _log_path = Deno.cwd() + "/logs/"
     console.log();
-    await Deno.writeTextFile(_log_path + file_path, new TextDecoder().decode(base));
+    await Deno.writeTextFile(_log_path + file_path, new TextDecoder().decode(base), {append: true});
     return new Success();
 }
