@@ -4,7 +4,7 @@
 # -Contributor: Pablo Vilas <pablovilas89 at gmail dot com>
 # -Contributor: Testuser_01 <arch@nico-siebler.de>
 
-pkgbase=webstorm-eap
+pkgbase=webstorm
 pkgname=(webstorm webstorm-jre)
 pkgver=233.11799.31
 pkgrel=1
